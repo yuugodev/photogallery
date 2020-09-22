@@ -2,7 +2,6 @@ import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
 
-// Your web app's Firebase configuration
 var firebaseConfig = {
 apiKey: "AIzaSyAa1nDytmQR5x9h2hjvu8bJwjLf3KUSX5o",
 authDomain: "photo-gallery-97039.firebaseapp.com",
@@ -17,7 +16,7 @@ firebase.initializeApp(firebaseConfig);
 
 // Firebase Storage
 const projectStorage = firebase.storage();
-
 const projectFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { projectFirestore, projectStorage};
+export { projectFirestore, projectStorage, timestamp};
